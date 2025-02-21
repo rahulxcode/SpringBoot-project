@@ -1,0 +1,38 @@
+type Query{
+	validateBYOD(deviceId:String): ByodValidationInfo
+}
+
+type ByodValidationInfo{
+	deviceSku: String
+	lostOrStolen: Boolean
+	verizonsDMD: Boolean
+	nonPay: Boolean
+	appleCarrierLock: Boolean
+	fmipLock: Boolean
+	premiumVisualVoiceMail: Boolean
+	voiceOverWifi: Boolean
+	travelPass: String
+	tradeInValueUpTo: String
+	byodCapable: Boolean
+	deviceId: String
+	preferredSoftSim: String
+	color: Color
+	imageUrlMap: ImageUrlMap
+	capacity: String
+	skuDisplayName: String
+}
+
+type Color{
+	colorId: String
+	displayName: String
+	description: String
+	colorCssStyle: String
+}
+
+type ImageUrlMap{
+	defaultImage: String
+	largeImage: String
+	mediumImage: String
+	miniImage: String
+	thumbImage: String
+}
